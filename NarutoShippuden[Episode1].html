@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>@FURYAXL Naruto:Shippuden [Episode 1: Homecoming] </title>
-	<link rel="stylesheet" href="style.css
-">
+	<title></title>
 </head>
 <body>
-	<video height="100%" width="100%" controls crossorigin playsinline poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" id="player">
-                    <!-- Video files -->
-                    <source src="https://archive.org/download/home-episode-1-homecomingcoming/1-480p.mp4" type="video/mp4" size="480p">
-                    <source src="https://archive.org/download/home-episode-1-homecomingcoming/1-720p.mp4" type="video/mp4" size="720pSD">
-                    <source src="https://archive.org/download/home-episode-1-homecomingcoming/1-1080p.mp4" type="video/mp4" size="1080pHD">
-		    <source src="https://archive.org/download/home-episode-1-homecomingcoming/1-1080p4K.mp4" type="video/mp4" size="10804k">
 
-                    <!-- Caption files -->
-                    <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
-                        default>
-                    <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt">
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<video height="100%" width="100%" id="video-id">
+	 <source data-fluid-hd src='https://archive.org/download/home-episode-1-homecomingcoming/1-1080p4K.mp4' title='1080p4k' type='video/mp4' />
+	  <source data-fluid-hd src='https://archive.org/download/home-episode-1-homecomingcoming/1-1080p.mp4' title='1080p' type='video/mp4' />
+    <source data-fluid-hd src='https://archive.org/download/home-episode-1-homecomingcoming/1-720p.mp4' title='720p' type='video/mp4' />
+    <source src='https://archive.org/download/home-episode-1-homecomingcoming/1-480p.mp4' title='480p' type='video/mp4' />
+<script>
+    var myFP = fluidPlayer(
+        'video-id',	{
 
-                    <!-- Fallback for browsers that don't support the <video> element -->
-                    <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
-                </video>
-                <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL" crossorigin="anonymous"></script>
 
-	<!-- Plyr core script -->
-	<script src="https://cdn.plyr.io/3.4.4/plyr.js" crossorigin="anonymous"></script>
 
-	<!-- Sharing libary (https://shr.one) -->
-	<script src="https://cdn.shr.one/1.0.1/shr.js" crossorigin="anonymous"></script>
+	"layoutControls": {
+		"controlBar": {
+			"autoHideTimeout": 3,
+			"animated": true,
+			"autoHide": true,
+primaryColor: "#28B8ED"
+		},
+		"htmlOnPauseBlock": {
+			"html": null,
+			"height": null,
+			"width": null
+		},
+		"autoPlay": true,
+		"mute": true,
+		"allowTheatre": true,
+		"playPauseAnimation": true,
+		"playbackRateEnabled": true,
+		"allowDownload": false,
+		"playButtonShowing": true,
+		"fillToContainer": false,
+		"posterImage": ""
+	},
+	"vastOptions": {
+		"adList": [],
+		"adCTAText": false,
+		"adCTATextPosition": ""
+	}
 
-	<!-- Rangetouch to fix <input type="range"> on touch devices (see https://rangetouch.com) -->
-	<script src="https://cdn.rangetouch.com/1.0.1/rangetouch.js" async crossorigin="anonymous"></script>
-
-	<!-- Docs script -->
-	<script src="https://cdn.plyr.io/3.4.4/demo.js" crossorigin="anonymous"></script>
-	<script type="script.js"></script>
+});
+</script>
 </body>
 </html>
